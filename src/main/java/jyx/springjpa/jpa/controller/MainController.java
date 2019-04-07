@@ -68,6 +68,8 @@ public class MainController {
     @PostMapping("/register")
     public String registerUser(User user) {
 
+        System.out.println(user.toString());
+
         List<Authority> authorities = new ArrayList<>();
 
         authorities.add(authorityService.getAuthorityById(ROLE_USER_AUTHORITY_ID).get());
